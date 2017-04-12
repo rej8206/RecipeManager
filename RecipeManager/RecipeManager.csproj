@@ -249,6 +249,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -280,6 +281,7 @@
     <Content Include="Views\Recipes\Index.cshtml" />
     <Content Include="Views\Recipes\Recipe.cshtml" />
     <Content Include="Views\Recipes\Search.cshtml" />
+    <Content Include="Views\Recipes\UserRecipes.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
