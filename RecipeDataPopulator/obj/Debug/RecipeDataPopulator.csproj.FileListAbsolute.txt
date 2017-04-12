@@ -4,3 +4,9 @@ C:\Users\Ben\Documents\School\CSC455 Recipe Manager\RecipeDataPopulator\bin\Debu
 C:\Users\Ben\Documents\School\CSC455 Recipe Manager\RecipeDataPopulator\obj\Debug\RecipeDataPopulator.csprojResolveAssemblyReference.cache
 C:\Users\Ben\Documents\School\CSC455 Recipe Manager\RecipeDataPopulator\obj\Debug\RecipeDataPopulator.exe
 C:\Users\Ben\Documents\School\CSC455 Recipe Manager\RecipeDataPopulator\obj\Debug\RecipeDataPopulator.pdb
+C:\Users\Ben\Documents\School\RecipeManager\RecipeDataPopulator\bin\Debug\RecipeDataPopulator.exe.config
+C:\Users\Ben\Documents\School\RecipeManager\RecipeDataPopulator\bin\Debug\RecipeDataPopulator.exe
+C:\Users\Ben\Documents\School\RecipeManager\RecipeDataPopulator\bin\Debug\RecipeDataPopulator.pdb
+C:\Users\Ben\Documents\School\RecipeManager\RecipeDataPopulator\obj\Debug\RecipeDataPopulator.csprojResolveAssemblyReference.cache
+C:\Users\Ben\Documents\School\RecipeManager\RecipeDataPopulator\obj\Debug\RecipeDataPopulator.exe
+C:\Users\Ben\Documents\School\RecipeManager\RecipeDataPopulator\obj\Debug\RecipeDataPopulator.pdb
