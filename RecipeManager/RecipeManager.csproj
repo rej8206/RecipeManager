@@ -241,6 +241,19 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SQL\Initialization\CreateRecipeTriggers.sql" />
+    <Content Include="SQL\Initialization\CreateTables.sql" />
+    <Content Include="SQL\Initialization\InitDatabase.sql" />
+    <Content Include="SQL\Initialization\InsertMeasurements.sql" />
+    <Content Include="SQL\Initialization\InsertRecipeLists.sql" />
+    <Content Include="SQL\Initialization\InsertRecipeParts.sql" />
+    <Content Include="SQL\Initialization\InsertRecipes.sql" />
+    <Content Include="SQL\Initialization\InsertUsers.sql" />
+    <Content Include="SQL\StoredProcedures\PerUserProcedures.sql" />
+    <Content Include="SQL\StoredProcedures\SearchByCulture.sql" />
+    <Content Include="SQL\StoredProcedures\SearchByIngs.sql" />
+    <Content Include="SQL\StoredProcedures\SearchByName.sql" />
+    <Content Include="SQL\StoredProcedures\UserProcedures.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
