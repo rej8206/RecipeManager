@@ -23,5 +23,13 @@ namespace RecipeManager.Controllers
         {
             return View();
         }
+        public ActionResult ShoppingList()
+        {
+            return View();
+        }
+        public ActionResult UserRecipes()
+        {
+            return View();
+        }
     }
 }
