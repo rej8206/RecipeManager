@@ -1,0 +1,9 @@
+SOURCE CreateTables.sql;
+SOURCE CreateRecipeTriggers.sql;
+SOURCE InsertUsers.sql;
+SOURCE InsertMeasurements.sql;
+SOURCE InsertRecipes.sql;
+SOURCE InsertRecipeParts.sql;
+SOURCE InsertRecipeLists.sql;
+SOURCE PerUserProcedures.sql;
+SOURCE UserProcedures.sql;

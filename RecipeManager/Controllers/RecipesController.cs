@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RecipeManager.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -22,6 +23,16 @@ namespace RecipeManager.Controllers
         public ActionResult Search()
         {
             return View();
+        }
+        public ActionResult ShoppingList()
+        {
+            return View();
+        }
+        public ActionResult UserRecipes()
+        {
+            RecipeListViewModel model;
+            model = new RecipeListViewModel();
+            return View(model);
         }
     }
 }

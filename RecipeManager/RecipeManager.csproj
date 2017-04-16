@@ -203,6 +203,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Login.aspx.cs">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\DatabaseConnectModel.cs" />
     <Compile Include="Models\Favorites.cs" />
@@ -214,6 +221,7 @@
     <Compile Include="Models\Recipe.cs" />
     <Compile Include="Models\ShoppingList.cs" />
     <Compile Include="Models\User.cs" />
+    <Compile Include="Models\RecipeListViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -224,6 +232,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Login.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
@@ -241,6 +250,19 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SQL\Initialization\CreateRecipeTriggers.sql" />
+    <Content Include="SQL\Initialization\CreateTables.sql" />
+    <Content Include="SQL\Initialization\InitDatabase.sql" />
+    <Content Include="SQL\Initialization\InsertMeasurements.sql" />
+    <Content Include="SQL\Initialization\InsertRecipeLists.sql" />
+    <Content Include="SQL\Initialization\InsertRecipeParts.sql" />
+    <Content Include="SQL\Initialization\InsertRecipes.sql" />
+    <Content Include="SQL\Initialization\InsertUsers.sql" />
+    <Content Include="SQL\StoredProcedures\PerUserProcedures.sql" />
+    <Content Include="SQL\StoredProcedures\SearchByCulture.sql" />
+    <Content Include="SQL\StoredProcedures\SearchByIngs.sql" />
+    <Content Include="SQL\StoredProcedures\SearchByName.sql" />
+    <Content Include="SQL\StoredProcedures\UserProcedures.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -249,6 +271,7 @@
     </Content>
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
+      <SubType>Designer</SubType>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -280,6 +303,8 @@
     <Content Include="Views\Recipes\Index.cshtml" />
     <Content Include="Views\Recipes\Recipe.cshtml" />
     <Content Include="Views\Recipes\Search.cshtml" />
+    <Content Include="Views\Recipes\UserRecipes.cshtml" />
+    <Content Include="Views\Recipes\ShoppingList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
