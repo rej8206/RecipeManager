@@ -6,9 +6,15 @@
 
 }
 
-<h2>Recipe Name</h2>
+<h2>Recipe Name: @Model.r.RecipeName</h2>
 <div>
-    <p>Name:</p>
-    <p>Descirption:</p>
+   
+    <p>Cooking time: @Model.r.MinutesToMake </p>
+    <p>Servings: @Model.r.Servings</p>
+    <p>Instructions: @Model.r.Instructions</p>
+    <p>Source: @Model.r.SourceName</p>
+   
 </div>
+
+@Html.ActionLink("Back","Index","Recipes")
 

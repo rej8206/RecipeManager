@@ -52,6 +52,7 @@ namespace CSC455RecipeManager
                 verifyReader.Close();
                 if (isValid)
                 {
+
                     OnLoggedIn(sender,e);
                 }
                 else
