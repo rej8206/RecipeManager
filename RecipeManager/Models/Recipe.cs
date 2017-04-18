@@ -25,16 +25,16 @@ namespace RecipeManager.Models
 
 
             List<Recipe> output = new List<Recipe>();
-            MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnStr"].ConnectionString);
+            MySqlConnection connection = MySqlProvider.Connection; //new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnStr"].ConnectionString);
             
             MySqlCommand recipeListCommand = connection.CreateCommand();
-            recipeListCommand.CommandText = "SELECT RecipeName FROM RecipeLists JOIN Recipes on RecipeLists.RecipeId = Recipes.RecipeId";
+            recipeListCommand.CommandText = "SELECT Recipes.RecipeName FROM UserRecipeList JOIN Recipes on UserRecipeList.RecipeId = Recipes.RecipeId"; //"SELECT RecipeName FROM RecipeLists JOIN Recipes on RecipeLists.RecipeId = Recipes.RecipeId";
            
 
             try
             {
 
-                connection.Open();
+                //connection.Open();
                 MySqlDataReader Reader = recipeListCommand.ExecuteReader();
                 if (Reader.Read())
                 {
@@ -58,12 +58,13 @@ namespace RecipeManager.Models
                 }
             }
             catch (MySqlException ex)
-            { }
-            finally
-
             {
-                connection.Close();
+                output.Add(new Recipe() { RecipeName = ex.Message });
             }
+            //finally
+            //{
+            //    connection.Close();
+            //}
             return output;   
         }
 
