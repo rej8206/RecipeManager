@@ -12,7 +12,8 @@
     <table id="tableRecipes" class="table-bordered table-hover" >
         <thead>
             <tr> 
-                <th>RecipeName</th>
+                <th>Recipe Id</th>
+                <th>Recipe Name</th>
                 <th>View Recipe</th>
             </tr>   
         </thead>
@@ -24,12 +25,13 @@
                 foreach (var Recipe in Model.Recipes)
                 {
                     <tr>
+                        <td>@Recipe.RecipeId</td>
                         <td>@Recipe.RecipeName</td>
-                        <td>@Html.ActionLink("View","Recipe","Recipes", new { RecipeName = Recipe.RecipeName})</td>
+                        <td>@Html.ActionLink("View","Recipe", "Recipes", new { RecipeId = Recipe.RecipeId })</td>
                         @* <td>@Recipe.Servings</td>
-                            <td>@Recipe.MinutesToMake</td>
-                            <td>@Recipe.Image</td>
-                            <td>@Recipe.SourceName</td>*@
+                        <td>@Recipe.MinutesToMake</td>
+                        <td>@Recipe.Image</td>
+                        <td>@Recipe.SourceName</td>*@
                     </tr>
 
                 }
@@ -37,6 +39,8 @@
             }
 
            
+
+
 
 
 
@@ -48,4 +52,6 @@
 
     </table>
 </div>
+
+@Html.ActionLink("Back", "Index", "Recipes")
 

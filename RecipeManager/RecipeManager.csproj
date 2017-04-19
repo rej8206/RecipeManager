@@ -219,9 +219,11 @@
     <Compile Include="Models\Measurement.cs" />
     <Compile Include="Models\Pantry.cs" />
     <Compile Include="Models\Recipe.cs" />
+    <Compile Include="Models\RecipeViewModel.cs" />
     <Compile Include="Models\ShoppingList.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\RecipeListViewModel.cs" />
+    <Compile Include="MySqlProvider.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>

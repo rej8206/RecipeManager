@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Text.RegularExpressions;
+using RecipeManager;
 
 namespace CSC455RecipeManager
 {
@@ -39,8 +40,7 @@ namespace CSC455RecipeManager
 
             try
             {
-                MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnStr"].ConnectionString);
-                connection.Open();
+                MySqlConnection connection = MySqlProvider.Connection;
 
                 MySqlCommand verifyCommand = connection.CreateCommand();
                 String sanitizedPassword = PasswordSanitationRegex.Replace(PasswordBox.Text, "\\$1");
@@ -52,6 +52,7 @@ namespace CSC455RecipeManager
                 verifyReader.Close();
                 if (isValid)
                 {
+
                     OnLoggedIn(sender,e);
                 }
                 else
@@ -61,7 +62,7 @@ namespace CSC455RecipeManager
                     RecipeListBox.Visible = false;
                 }
 
-                connection.Close();
+                //connection.Close();
             }
             catch (Exception ex)
             {

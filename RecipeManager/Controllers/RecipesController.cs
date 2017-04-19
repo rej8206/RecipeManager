@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+
 using System.Web.Mvc;
 
 namespace RecipeManager.Controllers
@@ -15,9 +16,15 @@ namespace RecipeManager.Controllers
             return View();
         }
 
-        public ActionResult Recipe ()
+       
+        public ActionResult Recipe (int RecipeId)
         {
-            return View();
+         
+          Recipe model = new Recipe();
+          model = RecipeDb.SelectRecipe(RecipeId);
+          return View(model);
+           
+           
         }
 
         public ActionResult Search()
