@@ -24,6 +24,8 @@ namespace RecipeManager.Controllers
 
         public ActionResult Search()
         {
+
+
             return View();
         }
         public ActionResult ShoppingList()

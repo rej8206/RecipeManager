@@ -264,6 +264,7 @@
     <Content Include="SQL\StoredProcedures\SearchByCulture.sql" />
     <Content Include="SQL\StoredProcedures\SearchByIngs.sql" />
     <Content Include="SQL\StoredProcedures\SearchByName.sql" />
+    <Content Include="SQL\StoredProcedures\RecipeProcedures.sql" />
     <Content Include="SQL\StoredProcedures\UserProcedures.sql" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

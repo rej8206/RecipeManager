@@ -20,9 +20,9 @@ CREATE TABLE Users (
 							
 CREATE TABLE Recipes (								---- ATTRIBUTE NAME IN API ----
 	RecipeId			INT				NOT NULL,		-- id
-	RecipeName			VARCHAR(50),					-- title
+	RecipeName			VARCHAR(100),					-- title
 	Instructions		TEXT,							-- instructions
-	Image				VARCHAR(100),					-- image
+	Image				VARCHAR(200),					-- image
 	Servings			INT,							-- servings
 	SourceName			VARCHAR(50),					-- sourceName
 	MinutesToMake		INT,							-- readyInMinutes

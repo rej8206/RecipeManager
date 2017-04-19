@@ -25,10 +25,10 @@ namespace RecipeManager.Models
 
 
             List<Recipe> output = new List<Recipe>();
-            MySqlConnection connection = MySqlProvider.Connection; //new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnStr"].ConnectionString);
+            MySqlConnection connection = MySqlProvider.Connection;
 
             MySqlCommand recipeListCommand = connection.CreateCommand();
-            recipeListCommand.CommandText = "SELECT * FROM UserRecipeList JOIN Recipes on UserRecipeList.RecipeId = Recipes.RecipeId"; //"SELECT RecipeName FROM RecipeLists JOIN Recipes on RecipeLists.RecipeId = Recipes.RecipeId";
+            recipeListCommand.CommandText = "SELECT * FROM UserRecipeList JOIN Recipes on UserRecipeList.RecipeId = Recipes.RecipeId";
 
 
             try
@@ -74,12 +74,12 @@ namespace RecipeManager.Models
         {
 
             Recipe output = new Recipe();
-            MySqlConnection connection = MySqlProvider.Connection; //new MySqlConnection(ConfigurationManager.ConnectionStrings["MySqlConnStr"].ConnectionString);
+            MySqlConnection connection = MySqlProvider.Connection;
 
             MySqlCommand Command = connection.CreateCommand();
             
             Command.Parameters.AddWithValue("@param1", id);
-            Command.CommandText = "SELECT * FROM UserRecipeList WHERE UserRecipes.RecipeId = @param1"; //"SELECT RecipeName FROM RecipeLists JOIN Recipes on RecipeLists.RecipeId = Recipes.RecipeId";
+            Command.CommandText = "SELECT * FROM UserRecipeList WHERE UserRecipes.RecipeId = @param1";
 
 
             try
@@ -117,6 +117,38 @@ namespace RecipeManager.Models
             //}
             return output;
 
+        }
+
+        public static List<Recipe> SearchRecipes(string searchTerm)
+        {
+            MySqlConnection connection = MySqlProvider.Connection;
+
+            MySqlCommand setSearchTermCommand = connection.CreateCommand();
+            setSearchTermCommand.CommandText = $"SET @searchTerm = '{searchTerm}'";
+            setSearchTermCommand.ExecuteNonQuery();
+
+            MySqlCommand searchCommand = connection.CreateCommand();
+            searchCommand.CommandText = "EXECUTE SearchRecipeNames USING @searchTerm";
+            MySqlDataReader reader = searchCommand.ExecuteReader();
+
+            var output = new List<Recipe>();
+            if (reader.Read())
+            {
+                var recipe = new Recipe()
+                {
+                    RecipeId = Convert.ToInt32(reader["RecipeId"]),
+                    RecipeName = Convert.ToString(reader["RecipeName"]),
+                    Instructions = Convert.ToString(reader["Instructions"]),
+                    Image = new Uri(Convert.ToString(reader["Iamge"])),
+                    Servings = Convert.ToInt16(reader["Servings"]),
+                    SourceName = Convert.ToString(reader["SourceName"]),
+                    MinutesToMake = Convert.ToInt16(reader["MinutesToMake"])
+                };
+
+                output.Add(recipe);
+            }
+
+            return output;
         }
     }
 

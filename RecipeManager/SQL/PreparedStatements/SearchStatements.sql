@@ -1,1 +1,1 @@
-PREPARE SearchRecipeNames FROM 'SELECT RecipeId, RecipeName FROM Recipes WHERE RecipeName LIKE CONCAT(\'%\', ?, \'%\')';
+PREPARE SearchRecipeNames FROM 'SELECT * FROM Recipes WHERE RecipeName LIKE CONCAT(\'%\', ?, \'%\')';

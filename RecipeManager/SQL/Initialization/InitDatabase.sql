@@ -7,3 +7,4 @@ SOURCE InsertRecipeParts.sql;
 SOURCE InsertRecipeLists.sql;
 SOURCE PerUserProcedures.sql;
 SOURCE UserProcedures.sql;
+SOURCE RecipeProcedures.sql;
