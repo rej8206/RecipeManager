@@ -15,9 +15,11 @@ namespace RecipeManager.Controllers
             return View();
         }
 
-        public ActionResult Recipe ()
+        public ActionResult Recipe (int RecipeId)
         {
-            return View();
+            Recipe model = RecipeDb.SelectRecipe(RecipeId);
+
+            return View(model);
         }
 
         public ActionResult Search()
